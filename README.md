@@ -209,6 +209,155 @@ else:
 
 menu()
 
+SECTION D
+Overview
+This program allows a user to:
 
+Add and remove students
+
+Record and update grades per subject
+
+View grades for a specific subject across all students
+
+Search for a student and see their full report
+
+View a summary of all students with overall averages
+
+The code is modularized into small, reusable functions, with built-in validation and error handling.
+
+Data Structure
+Student data is stored in a single dictionary called students:
+
+python
+students = {
+    "student_name": {
+        "subject_name": [grade1, grade2, ...],
+        ...
+    },
+    ...
+}
+Key → student name (string)
+
+Value → another dictionary mapping subject names to lists of grades (floats)
+
+Example:
+
+python
+{
+    "Alice": {
+        "Math": [85.0, 90.5],
+        "Science": [78.0]
+    },
+    "Bob": {
+        "Math": [70.0, 65.5]
+    }
+}
+Features
+#	Feature	Description
+1	Add student	Adds a new student by name
+2	Update grades	Adds or appends grades for a student in a subject
+3	Remove student	Deletes a student and all their data
+4	View grades for a subject	Shows every student's grades and average for a subject
+5	Search student	Displays a full report (per-subject + overall average)
+6	Show all students	Lists all students in the system
+7	Search & update student	Combines search and grade update in one flow
+8	Show student summary	Displays every student with subject count and overall average
+9	Exit	Closes the program
+Functions Reference
+Helper Functions
+Function	Purpose
+calculate_average(grades)	Returns the average of a list of grades, or None if the list is empty
+get_student(name)	Returns the student's data dictionary, or None if not found
+parse_grades(grades_input)	Converts a space-separated string into a list of floats; raises ValueError for invalid input
+Core Feature Functions
+Function	Purpose
+add_student()	Adds a new student after validating the name
+update_grades()	Adds or appends grades for an existing student
+remove_student()	Deletes a student if they exist
+view_grades_for_subject()	Displays grades and averages for a subject across all students
+search_student()	Displays a full report for one student
+search_and_update()	Searches for a student and updates their grades
+show_all_students()	Lists all students
+show_students_summary()	Displays a summary of every student
+Menu Functions
+Function	Purpose
+print_menu()	Prints the main menu options
+main()	Runs the main loop, reads user input, and dispatches to the correct function
+Error Handling
+The program handles the following error cases gracefully:
+
+Empty student name or subject → rejected with an error message
+
+Duplicate student → warns the user instead of overwriting
+
+Non-numeric grades → caught via try/except and reports the offending token
+
+No grades entered → rejected with an error message
+
+Missing student → reported as "Student not found"
+
+Empty grade lists → calculate_average() returns None to avoid ZeroDivisionError
+
+Example of a caught error:
+
+text
+Enter grades separated by spaces: 85 abc 90
+Error: 'abc' is not a valid number.
+How to Run
+Requirements
+Python 3.6 or later
+
+No external libraries required
+
+Steps
+Save the code to a file, e.g. student_manager.py
+
+Run it from the terminal:
+
+bash
+python student_manager.py
+Use the numbered menu to interact with the program.
+
+Example Session
+text
+--- STUDENT MANAGEMENT MENU ---
+1. Add student
+2. Update grades
+...
+Enter your choice: 1
+Enter student name: Alice
+Student 'Alice' added.
+
+Enter your choice: 2
+Enter student name: Alice
+Enter subject: Math
+Enter grades separated by spaces: 85 90.5
+Grades added.
+
+Enter your choice: 5
+Enter student name: Alice
+
+Report for Alice
+Math: [85.0, 90.5] | Avg: 87.75
+Overall Average: 87.75
+Design Notes
+Modularity: Each feature is a separate function, making the code easy to test, extend, and maintain.
+
+Reusability: Helpers like calculate_average() and parse_grades() are used across multiple features.
+
+Validation: Inputs are validated inside functions rather than at the menu level, so each function is safe to call independently.
+
+In-memory only: Data is not persisted to disk. Restarting the program clears all records.
+
+Possible Enhancements
+Save/load student data to a file (JSON or CSV)
+
+Add letter-grade conversion (A, B, C, …)
+
+Support editing or deleting individual grade entries
+
+Add sorting/filtering options (e.g., by average, by subject)
+
+Convert to a GUI or web app (e.g., Tkinter, Flask)
 
 
