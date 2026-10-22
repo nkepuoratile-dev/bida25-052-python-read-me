@@ -1,8 +1,8 @@
-Section A [read me]
+# Section A [read me]
 
-**student grade programme**
+# Student Grade Programme
 
-**overviews**
+# Overviews
 
 this programme allows you to:
 -	be able to input students grades, their names and subjects
@@ -22,7 +22,7 @@ this programme allows you to:
 -   compute all students total and their averages of all the grades
 -   outputs a class report which displays the grade of students and how it differentiates to the class average
   
-**Application**
+# Application
 
 select the programme and run it in the terminal
 
@@ -33,6 +33,7 @@ negative value the programme will prompt you to enter a numeric value same appli
 after entering the students and their grades the terminal should show you the class report for example;
 
 How many students are in the class? 3
+
 ========== CLASS REPORT ==========
 Total students : 3
 Total grades   : 160.00
@@ -43,7 +44,7 @@ Layla           Grade:  50.00   (below average)
 Jayden          Grade:  80.00   (above average)
 ==================================
 
-**Input regulations**
+# Input regulations
 
 - the grade should be in positive value from zero to 100
 - The number of students should be a positive value
@@ -61,7 +62,7 @@ Jayden          Grade:  80.00   (above average)
 - Name: Oratile Angel Nkepu
 - Email: bida25-052@thuto.bac.ac.bw
 
-**Section B**
+# Section B
 
 # Overview 
 
@@ -72,7 +73,7 @@ Jayden          Grade:  80.00   (above average)
 - It creates a student summary table which has student names, subject, averages, overall class averages and class average
 - Compute the highest and lowest grade for every subject  in the class
 
-# attributes
+# Attributes
 
 - Ensures that every grade should be numeral and should be amongst 0 and 100 [inclusive].
 - Make sure that the number of students should be a positive whole number
@@ -81,7 +82,7 @@ Jayden          Grade:  80.00   (above average)
 - It computes all the students averages, overall class average and calculate the highest and lowest grade for every subject in the class
 - It prints a student summary table which is displayed or aligned starting by showing the students , subjects [math , English, size] and average to show me class highest and lowest grades for every subject
 
-# application
+# Application
 
 - Select the programme and run it in the terminal.
 - The output will display “How many students are in the class”, from here you input the number of students, their names, their grades [if you input a negative value the programme will prompt you to enter a numeric value which is positive same applies to entering a letter] for example;
@@ -362,12 +363,13 @@ names which are the same but has different format are treated as different stude
 # Contributions
 
 - Feel free to add any contributions to the program at Editing bida25-052-python-read-me/README.md at main · nkepuoratile-dev/bida25-052-python-read-me
+
 # Installation 
 - Python 2026.6
+
 # Contact
 - Name: Oratile Angel Nkepu
 - Email: bida25-052@thuto.bac.ac.bw
-
 
 # Section D 
 
@@ -649,7 +651,7 @@ Name: Mavis
 Grades: [99.0]
 Average: 99.0
 
-# programme architecture
+# Programme architecture
 
 Error handling
 
@@ -865,7 +867,7 @@ Traceback (most recent call last):
     raise StudentNotFoundException("Student not found")
 StudentNotFoundException: Student not found
 
-# programme architecture
+# Programme Architecture
 studentNotFoundException
  This is whereby the student is not found or cannot be found in the grade book
 InvalidGradeError
@@ -894,10 +896,11 @@ If you enter a student which is not found in the grade book or the class you wil
 if you enter an invalid grade which is a grade is less than 0 or more than 100 or not a numeral value you will encounter an error which is called InvalidGradeError.
 
 # Contributions
-
 - Feel free to add any contributions to the program at Editing bida25-052-python-read-me/README.md at main · nkepuoratile-dev/bida25-052-python-read-me
+
 # Installation 
 - Python 2026.6
+
 # Contact
 - Name: Oratile Angel Nkepu
 - Email: bida25-052@thuto.bac.ac.bw
