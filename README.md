@@ -167,8 +167,7 @@ the grade it should be any numeral value from zero to 100.
 - Name: Oratile Angel Nkepu
 - Email: bida25-052@thuto.bac.ac.bw
 
-
-Section C
+# Section C
 
 #  STUDENT GRADE PROGRAM
 
